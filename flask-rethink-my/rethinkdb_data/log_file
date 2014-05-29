@@ -1,0 +1,33 @@
+2014-05-28T00:53:54.111469000 0.003752s info: Creating directory /Users/Zoe/Dropbox/GitHub/projects/flask-rethink-my/rethinkdb_data
+2014-05-28T00:53:54.111629000 0.003912s info: Creating a default database for your convenience. (This is because you ran 'rethinkdb' without 'create', 'serve', or '--join', and the directory '/Users/Zoe/Dropbox/GitHub/projects/flask-rethink-my/rethinkdb_data' did not already exist.)
+2014-05-28T00:53:54.111675000 0.003958s info: Running rethinkdb 1.12.3 (CLANG 5.1 (clang-503.0.40))...
+2014-05-28T00:53:54.115248000 0.007531s info: Running on Darwin 13.1.0 x86_64
+2014-05-28T00:53:54.115310000 0.007592s info: Using cache size of 502 MB
+2014-05-28T00:53:54.115350000 0.007632s info: Loading data from directory /Users/Zoe/Dropbox/GitHub/projects/flask-rethink-my/rethinkdb_data
+2014-05-28T00:53:54.223966000 0.116249s error: Could not bind to cluster port: The address at localhost:29015 is reserved or already in use.
+2014-05-28T00:58:58.604937000 0.333764s info: Running rethinkdb 1.12.3 (CLANG 5.1 (clang-503.0.40))...
+2014-05-28T00:58:58.611535000 0.340362s info: Running on Darwin 13.1.0 x86_64
+2014-05-28T00:58:58.611596000 0.340423s info: Using cache size of 500 MB
+2014-05-28T00:58:58.611648000 0.340475s info: Loading data from directory /Users/Zoe/Dropbox/GitHub/projects/flask-rethink-my/rethinkdb_data
+2014-05-28T00:58:58.618964000 0.347791s info: Listening for intracluster connections on port 29015
+2014-05-28T00:58:58.621409000 0.350236s info: Listening for client driver connections on port 28015
+2014-05-28T00:58:58.621635000 0.350461s info: Listening for administrative HTTP connections on port 8080
+2014-05-28T00:58:58.621656000 0.350483s info: Listening on addresses: 127.0.0.1, ::1
+2014-05-28T00:58:58.621675000 0.350502s info: To fully expose RethinkDB on the network, bind to all addresses
+2014-05-28T00:58:58.621694000 0.350520s info: by running rethinkdb with the `--bind all` command line option.
+2014-05-28T00:58:58.621713000 0.350540s info: Server ready
+2014-05-28T00:59:08.626844000 10.355829s info: Server got SIGINT from pid 8096, uid 501; shutting down...
+2014-05-28T00:59:08.627174000 10.356158s info: Shutting down client connections...
+2014-05-28T00:59:08.627646000 10.356631s info: All client connections closed.
+2014-05-28T00:59:08.627674000 10.356659s info: Shutting down storage engine... (This may take a while if you had a lot of unflushed data in the writeback cache.)
+2014-05-28T00:59:08.627691000 10.356676s info: Storage engine shut down.
+2014-05-28T00:59:21.220846000 0.004605s info: Running rethinkdb 1.12.3 (CLANG 5.1 (clang-503.0.40))...
+2014-05-28T00:59:21.224416000 0.008175s info: Running on Darwin 13.1.0 x86_64
+2014-05-28T00:59:21.224454000 0.008213s info: Using cache size of 497 MB
+2014-05-28T00:59:21.224477000 0.008236s info: Loading data from directory /Users/Zoe/Dropbox/GitHub/projects/flask-rethink-my/rethinkdb_data
+2014-05-28T00:59:21.230820000 0.014579s error: Could not bind to cluster port: The address at localhost:29015 is reserved or already in use.
+2014-05-28T00:59:24.627329000 0.003917s info: Running rethinkdb 1.12.3 (CLANG 5.1 (clang-503.0.40))...
+2014-05-28T00:59:24.631264000 0.007853s info: Running on Darwin 13.1.0 x86_64
+2014-05-28T00:59:24.631328000 0.007916s info: Using cache size of 496 MB
+2014-05-28T00:59:24.631369000 0.007957s info: Loading data from directory /Users/Zoe/Dropbox/GitHub/projects/flask-rethink-my/rethinkdb_data
+2014-05-28T00:59:24.638626000 0.015215s error: Could not bind to cluster port: The address at localhost:29015 is reserved or already in use.

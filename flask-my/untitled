@@ -1,0 +1,166 @@
+
+<head>
+    <meta charset="utf-8">
+    <title>Zoe's Movie Trailers</title>
+
+    <!-- Bootstrap 3 -->
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap-theme.min.css">
+    <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="https://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+    <style type="text/css" media="screen">
+        body {
+            padding-top: 80px;
+        }
+        #trailer .modal-dialog {
+            margin-top: 200px;
+            width: 640px;
+            height: 480px;
+        }
+        .hanging-close {
+            position: absolute;
+            top: -12px;
+            right: -12px;
+            z-index: 9001;
+        }
+        #trailer-video {
+            width: 100%;
+            height: 100%;
+        }
+        .movie-tile {
+            margin-bottom: 20px;
+            padding-top: 20px;
+        }
+        .movie-tile:hover {
+            background-color: #EEE;
+            cursor: pointer;
+        }
+        .scale-media {
+            padding-bottom: 56.25%;
+            position: relative;
+        }
+        .scale-media iframe {
+            border: none;
+            height: 100%;
+            position: absolute;
+            width: 100%;
+            left: 0;
+            top: 0;
+            background-color: white;
+        }
+    </style>
+    <script type="text/javascript" charset="utf-8">
+        // Pause the video when the modal is closed
+        $(document).on('click', '.hanging-close, .modal-backdrop, .modal', function (event) {
+            // Remove the src so the player itself gets removed, as this is the only
+            // reliable way to ensure the video stops playing in IE
+            $("#trailer-video-container").empty();
+        });
+        // Start playing the video whenever the trailer modal is opened
+        $(document).on('click', '.movie-tile', function (event) {
+            var trailerYouTubeId = $(this).attr('data-trailer-youtube-id')
+            var sourceUrl = 'http://www.youtube.com/embed/' + trailerYouTubeId + '?autoplay=1&html5=1';
+            $("#trailer-video-container").empty().append($("<iframe></iframe>", {
+              'id': 'trailer-video',
+              'type': 'text-html',
+              'src': sourceUrl,
+              'frameborder': 0
+            }));
+        });
+        // Animate in the movies when the page loads
+        $(document).ready(function () {
+          $('.movie-tile').hide().first().show("fast", function showNext() {
+            $(this).next("div").show("fast", showNext);
+          });
+        });
+    </script>
+</head>
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>Bootstrap Demo</title>
+        <link href="http://twitter.github.com/bootstrap/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="http://twitter.github.com/bootstrap/assets/css/docs.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="navbar navbar-fixed-top">
+            <div class="navbar-inner">
+                <div class="container">
+                    <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="brand" target="_blank" href="http://www.the5fire.net">the5fire</a>
+                    <div class="nav-collapse collapse">
+                        <ul class="nav">
+                            <li class="">
+                            <a href="http://www.the5fire.net/about" target="_blank">关于the5fire</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <header class="jumbotron subhead" id="overview">
+            <h1>欢迎来到the5fire的博客</h1>
+            <p class="lead">使用Bootstrap构建</p>
+            <div class="subnav">
+                <ul class="nav nav-pills">
+                    <li><a href="#">python</a></li>
+                    <li><a href="#">django</a></li>
+                    <li><a href="#">java</a></li>
+                    <li><a href="#">读书</a></li>
+                    <li><a href="#">设计模式</a></li>
+                    <li><a href="#">软件开发</a></li>
+                </ul>
+            </div>
+            </header>
+
+            <section id="typography">
+            <div class="page-header">
+                <h1>python <small>记录python的学习历程</small></h1>
+            </div>
+
+            <!-- Headings & Paragraph Copy -->
+            <div class="row">
+                <div class="span4">
+                    <h3>python学习笔记</h3>
+                    <ul>
+                        <li>python学习笔记1</li>
+                        <li>python学习笔记2</li>
+                        <li>python学习笔记3</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <h3>python实战训练</h3>
+                    <ul>
+                        <li>python爬虫实战1</li>
+                        <li>python爬虫实战2</li>
+                        <li>python文件管理1</li>
+                    </ul>
+                </div>
+                <div class="span4">
+                    <h3>python心得总结</h3>
+                    <ul>
+                        <li>python总结1</li>
+                        <li>python总结2</li>
+                        <li>python总结3</li>
+                    </ul>
+                </div>
+            </div>
+            </section>
+        </div>
+
+        <div class="container">
+            <footer class="footer">
+            <p class="pull-right"><a href="#">返回顶部</a></p>
+            <p>网站地图</p>
+            <p>版权声明： <a href="http://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</p>
+            </footer>
+        </div>
+    </body>
+</html>
